@@ -11,6 +11,15 @@ find_package(rclcpp REQUIRED)
 find_package(moveit_core REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 
+add_executable(moveit_demo_node src/moveit_demo.cpp)
+target_link_libraries(moveit_demo_node
+  ${rclcpp_LIBRARIES}
+  moveit::moveit_ros_planning_interface
+)
+
+install(TARGETS moveit_demo_node
+  DESTINATION lib/${PROJECT_NAME})
+  
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
