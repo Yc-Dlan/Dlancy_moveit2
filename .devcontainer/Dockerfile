@@ -1,4 +1,4 @@
-FROM ros:humble-desktop
+FROM osrf/ros:humble-desktop-full
 
 # 定义用户和用户组
 ARG USERNAME=yc-dlan
