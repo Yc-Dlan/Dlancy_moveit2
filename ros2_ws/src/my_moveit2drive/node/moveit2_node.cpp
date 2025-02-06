@@ -1,5 +1,6 @@
 #include <rclcpp/rclcpp.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
+#include <geometry_msgs/msg/pose.hpp>
 
 int main(int argc, char** argv)
 {
@@ -7,7 +8,7 @@ int main(int argc, char** argv)
   auto node = std::make_shared<rclcpp::Node>("moveit_demo");
   
   // 初始化MoveIt接口
-  auto move_group_interface = moveit::planning_interface::MoveGroupInterface(node, "arm_group");
+  moveit::planning_interface::MoveGroupInterface move_group_interface(node, "arm_group");
   
   // 设置目标位置（示例坐标）
   geometry_msgs::msg::Pose target_pose;
@@ -20,15 +21,21 @@ int main(int argc, char** argv)
     // 设置目标位姿
     move_group_interface.setPoseTarget(target_pose);
     
-    // 规划并执行运动
-    auto plan = move_group_interface.plan();
-    if(plan.trajectory_.joint_trajectory.points.empty()) {
+    // 创建 Plan 对象
+    moveit::planning_interface::MoveGroupInterface::Plan plan;
+
+    // 规划运动
+    moveit::core::MoveItErrorCode success = move_group_interface.plan(plan);
+
+    // 检查规划是否成功
+    if (success && !plan.trajectory_.joint_trajectory.points.empty()) {
+      // 执行规划
+      move_group_interface.execute(plan);
+      RCLCPP_INFO(node->get_logger(), "Motion executed successfully!");
+    } else {
       RCLCPP_ERROR(node->get_logger(), "Planning failed!");
       return 1;
     }
-    
-    move_group_interface.execute(plan);
-    RCLCPP_INFO(node->get_logger(), "Motion executed successfully!");
     
   } catch (const std::exception& e) {
     RCLCPP_ERROR(node->get_logger(), "Error: %s", e.what());

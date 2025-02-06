@@ -10,21 +10,43 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(moveit_core REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
+find_package(urdf REQUIRED)
+find_package(geometric_shapes REQUIRED)
 
-include_directories(${rclcpp_INCLUDE_DIRS})
-include_directories(${moveit_ros_planning_interface_INCLUDE_DIRS})
+include_directories(
+  ${rclcpp_INCLUDE_DIRS}
+  ${moveit2_core_INCLUDE_DIRS}
+  ${moveit_ros_planning_interface_INCLUDE_DIRS}
+  ${urdf_INCLUDE_DIRS}
+  ${geometric_shapes_INCLUDE_DIRS}
+)
 add_executable(moveit2_node node/moveit2_node.cpp)
+
+ament_target_dependencies(moveit2_node
+  rclcpp
+  moveit_core
+  moveit_ros_planning_interface
+  urdf
+  geometric_shapes
+)
 
 target_link_libraries(moveit2_node
   ${rclcpp_LIBRARIES}
   rclcpp
+  ${moveit_core_LIBRARIES}
   moveit_core
+  ${moveit_ros_planning_interface_LIBRARIES}
   moveit_ros_planning_interface
+  ${urdf_LIBRARIES}
+  urdf
+  ${geometric_shapes_LIBRARIES}
+  geometric_shapes
 )
 
 install(TARGETS moveit2_node
   DESTINATION lib/${PROJECT_NAME})
   
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
