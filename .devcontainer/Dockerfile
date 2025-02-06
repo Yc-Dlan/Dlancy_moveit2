@@ -26,6 +26,15 @@ RUN apt-get update \
     ros-humble-xacro \
     && pip3 install -U colcon-common-extensions
 
+# 安装必要的 ROS 包
+RUN apt-get update && apt-get install -y \
+    ros-humble-urdf \
+    ros-humble-robot-state-publisher \
+    ros-humble-joint-state-publisher \
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-rviz2 \
+    ros-humble-xacro
+    
 # 安装colcon构建系统
 RUN pip3 install -U colcon-common-extensions
 
