@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(my_moveit_demo)
+project(my_moveit2driver)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -11,13 +11,18 @@ find_package(rclcpp REQUIRED)
 find_package(moveit_core REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 
-add_executable(moveit_demo_node src/moveit_demo.cpp)
-target_link_libraries(moveit_demo_node
+include_directories(${rclcpp_INCLUDE_DIRS})
+include_directories(${moveit_ros_planning_interface_INCLUDE_DIRS})
+add_executable(moveit2_node node/moveit2_node.cpp)
+
+target_link_libraries(moveit2_node
   ${rclcpp_LIBRARIES}
-  moveit::moveit_ros_planning_interface
+  rclcpp
+  moveit_core
+  moveit_ros_planning_interface
 )
 
-install(TARGETS moveit_demo_node
+install(TARGETS moveit2_node
   DESTINATION lib/${PROJECT_NAME})
   
 if(BUILD_TESTING)
