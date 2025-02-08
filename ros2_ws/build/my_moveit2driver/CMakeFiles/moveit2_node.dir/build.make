@@ -2469,14 +2469,14 @@ moveit2_node: /opt/ros/humble/lib/libmoveit_move_group_capabilities_base.so.2.5.
 moveit2_node: /opt/ros/humble/lib/librclcpp_action.so
 moveit2_node: /usr/lib/x86_64-linux-gnu/libcurl.so
 moveit2_node: /opt/ros/humble/lib/libresource_retriever.so
+moveit2_node: /opt/ros/humble/lib/librandom_numbers.so
+moveit2_node: /opt/ros/humble/lib/x86_64-linux-gnu/liboctomap.so
+moveit2_node: /opt/ros/humble/lib/x86_64-linux-gnu/liboctomath.so
+moveit2_node: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 moveit2_node: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
 moveit2_node: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
 moveit2_node: /usr/lib/x86_64-linux-gnu/libLinearMath.so
 moveit2_node: /usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
-moveit2_node: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-moveit2_node: /opt/ros/humble/lib/librandom_numbers.so
-moveit2_node: /opt/ros/humble/lib/x86_64-linux-gnu/liboctomap.so
-moveit2_node: /opt/ros/humble/lib/x86_64-linux-gnu/liboctomath.so
 moveit2_node: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 moveit2_node: CMakeFiles/moveit2_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yc-dlan/Dlancy_moveit2/ros2_ws/build/my_moveit2driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable moveit2_node"

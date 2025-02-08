@@ -32,15 +32,10 @@ ament_target_dependencies(moveit2_node
 
 target_link_libraries(moveit2_node
   ${rclcpp_LIBRARIES}
-  rclcpp
   ${moveit_core_LIBRARIES}
-  moveit_core
   ${moveit_ros_planning_interface_LIBRARIES}
-  moveit_ros_planning_interface
   ${urdf_LIBRARIES}
-  urdf
   ${geometric_shapes_LIBRARIES}
-  geometric_shapes
 )
 
 install(TARGETS moveit2_node
