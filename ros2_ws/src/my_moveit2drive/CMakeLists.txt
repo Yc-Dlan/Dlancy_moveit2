@@ -12,6 +12,7 @@ find_package(moveit_core REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(urdf REQUIRED)
 find_package(geometric_shapes REQUIRED)
+find_package(moveit_resources_panda_description REQUIRED)
 
 include_directories(
   ${rclcpp_INCLUDE_DIRS}
@@ -19,6 +20,7 @@ include_directories(
   ${moveit_ros_planning_interface_INCLUDE_DIRS}
   ${urdf_INCLUDE_DIRS}
   ${geometric_shapes_INCLUDE_DIRS}
+  ${moveit_resources_panda_description_INCLUDE_DIRS}
 )
 add_executable(moveit2_node node/moveit2_node.cpp)
 
@@ -28,6 +30,7 @@ ament_target_dependencies(moveit2_node
   moveit_ros_planning_interface
   urdf
   geometric_shapes
+  moveit_resources_panda_description
 )
 
 target_link_libraries(moveit2_node
@@ -36,6 +39,7 @@ target_link_libraries(moveit2_node
   ${moveit_ros_planning_interface_LIBRARIES}
   ${urdf_LIBRARIES}
   ${geometric_shapes_LIBRARIES}
+  ${moveit_resources_panda_description_LIBRARIES}
 )
 
 install(TARGETS moveit2_node

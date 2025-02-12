@@ -427,6 +427,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/humble/share/moveit_msgs/cmake/rosidl_cmake-extras.cmake"
   "/opt/ros/humble/share/moveit_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake"
   "/opt/ros/humble/share/moveit_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake"
+  "/opt/ros/humble/share/moveit_resources_panda_description/cmake/moveit_resources_panda_descriptionConfig-version.cmake"
+  "/opt/ros/humble/share/moveit_resources_panda_description/cmake/moveit_resources_panda_descriptionConfig.cmake"
   "/opt/ros/humble/share/moveit_ros_move_group/cmake/ConfigExtras.cmake"
   "/opt/ros/humble/share/moveit_ros_move_group/cmake/ament_cmake_export_dependencies-extras.cmake"
   "/opt/ros/humble/share/moveit_ros_move_group/cmake/ament_cmake_export_targets-extras.cmake"

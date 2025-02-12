@@ -556,6 +556,9 @@ moveit_core_DIR:PATH=/opt/ros/humble/share/moveit_core/cmake
 //The directory containing a CMake configuration file for moveit_msgs.
 moveit_msgs_DIR:PATH=/opt/ros/humble/share/moveit_msgs/cmake
 
+//The directory containing a CMake configuration file for moveit_resources_panda_description.
+moveit_resources_panda_description_DIR:PATH=/opt/ros/humble/share/moveit_resources_panda_description/cmake
+
 //The directory containing a CMake configuration file for moveit_ros_move_group.
 moveit_ros_move_group_DIR:PATH=/opt/ros/humble/share/moveit_ros_move_group/cmake
 
