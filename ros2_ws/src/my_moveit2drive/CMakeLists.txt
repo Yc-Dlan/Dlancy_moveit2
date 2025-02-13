@@ -13,6 +13,7 @@ find_package(moveit_ros_planning_interface REQUIRED)
 find_package(urdf REQUIRED)
 find_package(geometric_shapes REQUIRED)
 find_package(moveit_resources_panda_description REQUIRED)
+find_package(panda_moveit_config REQUIRED)
 
 include_directories(
   ${rclcpp_INCLUDE_DIRS}

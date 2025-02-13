@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-joint-state-publisher-gui \
     ros-humble-rviz2 \
     ros-humble-xacro \
-    ros-humble-moveit-resources-panda-description
+    ros-humble-moveit-resources-panda-description 
     
 # 安装colcon构建系统
 RUN pip3 install -U colcon-common-extensions
