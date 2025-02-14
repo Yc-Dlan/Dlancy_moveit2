@@ -22,6 +22,7 @@ include_directories(
   ${urdf_INCLUDE_DIRS}
   ${geometric_shapes_INCLUDE_DIRS}
   ${moveit_resources_panda_description_INCLUDE_DIRS}
+  ${panda_moveit_config_INCLUDE_DIRS}
 )
 add_executable(moveit2_node node/moveit2_node.cpp)
 
@@ -32,6 +33,7 @@ ament_target_dependencies(moveit2_node
   urdf
   geometric_shapes
   moveit_resources_panda_description
+  panda_moveit_config
 )
 
 target_link_libraries(moveit2_node
@@ -41,6 +43,7 @@ target_link_libraries(moveit2_node
   ${urdf_LIBRARIES}
   ${geometric_shapes_LIBRARIES}
   ${moveit_resources_panda_description_LIBRARIES}
+  ${panda_moveit_config_LIBRARIES}
 )
 
 install(TARGETS moveit2_node
