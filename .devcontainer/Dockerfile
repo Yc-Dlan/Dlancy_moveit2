@@ -50,7 +50,10 @@ RUN apt-get update && apt-get install -y \
     ros-humble-rviz-default-plugins \
     ros-humble-warehouse-ros \
     ros-humble-srdfdom \
-    ros-humble-tf2
+    ros-humble-tf2 \
+    ros-humble-joint-trajectory-controller \
+    ros-humble-joint-state-broadcaster \
+    ros-humble-gripper-controllers
     
 # 安装colcon构建系统
 RUN pip3 install -U colcon-common-extensions
