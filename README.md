@@ -10,6 +10,6 @@
 - ~/Dlancy_moveit2/.devcontainer代表你当前所在的位置
 - docker-compose up -d代表当前的指令操作（在执行本功能包功能时，仅需要复制$后的内容即可，并且注意区分当前位置）
 #### 首先克隆主播的仓库
->(docker)$ https://github.com/Yc-Dlan/Dlancy_moveit2.git
->(docker)$ git@github.com:Yc-Dlan/Dlancy_moveit2.git
+>(docker)$ https://github.com/Yc-Dlan/Dlancy_moveit2.git  
+>(docker)$ git@github.com:Yc-Dlan/Dlancy_moveit2.git  
 >
