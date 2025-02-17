@@ -9,3 +9,8 @@ install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}
   PATTERN "setup_assistant.launch" EXCLUDE)
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
+
+# 安装 URDF 文件
+install(DIRECTORY urdf
+  DESTINATION share/${PROJECT_NAME}/
+)

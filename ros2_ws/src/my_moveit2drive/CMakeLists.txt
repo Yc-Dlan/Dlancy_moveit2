@@ -14,6 +14,9 @@ find_package(urdf REQUIRED)
 find_package(geometric_shapes REQUIRED)
 find_package(moveit_resources_panda_description REQUIRED)
 find_package(panda_moveit_config REQUIRED)
+find_package(srdfdom REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
 
 include_directories(
   ${rclcpp_INCLUDE_DIRS}
@@ -23,7 +26,11 @@ include_directories(
   ${geometric_shapes_INCLUDE_DIRS}
   ${moveit_resources_panda_description_INCLUDE_DIRS}
   ${panda_moveit_config_INCLUDE_DIRS}
+  ${srdfdom_INCLUDE_DIRS}
+  ${tf2_INCLUDE_DIRS}
+  ${tf2_ros_INCLUDE_DIRS}
 )
+
 add_executable(moveit2_node node/moveit2_node.cpp)
 
 ament_target_dependencies(moveit2_node
@@ -34,6 +41,9 @@ ament_target_dependencies(moveit2_node
   geometric_shapes
   moveit_resources_panda_description
   panda_moveit_config
+  srdfdom
+  tf2
+  tf2_ros
 )
 
 target_link_libraries(moveit2_node
@@ -44,11 +54,18 @@ target_link_libraries(moveit2_node
   ${geometric_shapes_LIBRARIES}
   ${moveit_resources_panda_description_LIBRARIES}
   ${panda_moveit_config_LIBRARIES}
+  ${srdfdom_LIBRARIES}
+  ${tf2_LIBRARIES}
+  ${tf2_ros_LIBRARIES}
 )
 
 install(TARGETS moveit2_node
   DESTINATION lib/${PROJECT_NAME})
-  
+
+# 安装 URDF 文件
+install(DIRECTORY urdf
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

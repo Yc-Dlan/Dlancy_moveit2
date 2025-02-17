@@ -1,2 +1,1 @@
-source;share/panda_moveit_config/environment/ament_prefix_path.sh
-source;share/panda_moveit_config/environment/path.sh
+/home/yc-dlan/Dlancy_moveit2/ros2_ws/build/panda_moveit_config/ament_cmake_environment_hooks/local_setup.dsv

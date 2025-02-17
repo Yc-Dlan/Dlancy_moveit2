@@ -35,7 +35,22 @@ RUN apt-get update && apt-get install -y \
     ros-humble-joint-state-publisher-gui \
     ros-humble-rviz2 \
     ros-humble-xacro \
-    ros-humble-moveit-resources-panda-description 
+    ros-humble-moveit-resources-panda-description \
+    ros-humble-moveit-kinematics \
+    ros-humble-moveit-planners \
+    ros-humble-moveit-simple-controller-manager \
+    ros-humble-tf2-ros \
+    ros-humble-controller-manager \
+    ros-humble-moveit-configs-utils \
+    ros-humble-moveit-ros-move-group \
+    ros-humble-moveit-ros-visualization \
+    ros-humble-moveit-ros-warehouse \
+    ros-humble-moveit-setup-assistant \
+    ros-humble-rviz-common \
+    ros-humble-rviz-default-plugins \
+    ros-humble-warehouse-ros \
+    ros-humble-srdfdom \
+    ros-humble-tf2
     
 # 安装colcon构建系统
 RUN pip3 install -U colcon-common-extensions
