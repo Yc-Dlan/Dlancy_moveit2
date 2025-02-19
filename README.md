@@ -41,3 +41,20 @@
 ```
 此时你以及完成了功能包的拷贝，主要包含`panda_moveit_config`&`my_moveit2driver`两个文件，屏幕中也会显示：  
 > Summary: 2 packages finisher [times]
+#### 6.launch
+此时我们仅需要启动launch文件就可以了
+```bash
+>(bash) ~/Dlancy_moveit2/ros2_ws$ ros2 launch my_moveit2driver my_moveit2driver.launch.py
+```
+此时应该就可以正常运行，开始moveit的基本使用，这里我们仅仅启动了demo文件，未实现其他功能，如读者有兴趣可在chapter 7中自行尝试。
+#### 7.else
+```bash
+>(bash) ~/Dlancy_moveit2/ros2_ws$ ros2 launch panda_moveit_config (一些基本的功能包)
+Examples:
+- move_group.launch.py
+- moveit_rviz.launch.py
+- rsp.launch.py
+- spawn_controllers.launch.py
+- static_virtual_joint_tfs.launch.py
+- warehouse_db.launch.py
+```
