@@ -25,7 +25,7 @@
 >(docker) ~/Dlancy_moveit2/.devcontainer$ docker-compose up --build
 ```
 如果构建成功你应该会看到如下式样：  
-> Starting moveit2_container ... done
+> Starting moveit2_container ... done   
 > Attaching to moveit2_container
 #### 4.进入容器
 ```bash
