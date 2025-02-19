@@ -316,6 +316,9 @@ include("/home/yc-dlan/Dlancy_moveit2/ros2_ws/build/my_moveit2driver/ament_cmake
 # install(DIRECTORY "urdf" "DESTINATION" "share/my_moveit2driver/")
 ament_cmake_symlink_install_directory("/home/yc-dlan/Dlancy_moveit2/ros2_ws/src/my_moveit2drive" DIRECTORY "urdf" "DESTINATION" "share/my_moveit2driver/")
 
+# install(DIRECTORY "launch" "DESTINATION" "share/my_moveit2driver/")
+ament_cmake_symlink_install_directory("/home/yc-dlan/Dlancy_moveit2/ros2_ws/src/my_moveit2drive" DIRECTORY "launch" "DESTINATION" "share/my_moveit2driver/")
+
 # install(FILES "/home/yc-dlan/Dlancy_moveit2/ros2_ws/build/my_moveit2driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_moveit2driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/yc-dlan/Dlancy_moveit2/ros2_ws/src/my_moveit2drive" FILES "/home/yc-dlan/Dlancy_moveit2/ros2_ws/build/my_moveit2driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/my_moveit2driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

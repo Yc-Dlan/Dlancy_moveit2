@@ -2,6 +2,7 @@
 /home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/my_moveit2driver//urdf/panda.urdf
 /home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/my_moveit2driver//urdf/panda.urdf:Zone.Identifier
 /home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/my_moveit2driver//urdf/panda.xacro
+/home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/my_moveit2driver//launch/my_moveit2driver.launch.py
 /home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/ament_index/resource_index/package_run_dependencies/my_moveit2driver
 /home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/ament_index/resource_index/parent_prefix_path/my_moveit2driver
 /home/yc-dlan/Dlancy_moveit2/ros2_ws/install/my_moveit2driver/share/my_moveit2driver/environment/ament_prefix_path.sh
