@@ -34,6 +34,7 @@
 >(docker) ~/Dlancy_moveit2/.devcontainer$ docker exec -it moveit2_container bash
 ```
 完成上面的操作之后，你应该顺利进入了我们的moveit2_container容器当中
+![image 1](images/1.png)
 #### 5.编译
 ```bash
 >(bash) ~/Dlancy_moveit2/ros2_ws$ colcon build
@@ -41,12 +42,14 @@
 ```
 此时你以及完成了功能包的拷贝，主要包含`panda_moveit_config`&`my_moveit2driver`两个文件，屏幕中也会显示：  
 > Summary: 2 packages finisher [times]
+![image 2](images/2.png)
 #### 6.launch
 此时我们仅需要启动launch文件就可以了
 ```bash
 >(bash) ~/Dlancy_moveit2/ros2_ws$ ros2 launch my_moveit2driver my_moveit2driver.launch.py
 ```
 此时应该就可以正常运行，开始moveit的基本使用，这里我们仅仅启动了demo文件，未实现其他功能，如读者有兴趣可在chapter 7中自行尝试。
+![image 3](images/3.png)
 #### 7.else
 ```bash
 >(bash) ~/Dlancy_moveit2/ros2_ws$ ros2 launch panda_moveit_config (一些基本的功能包)
