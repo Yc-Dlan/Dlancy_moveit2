@@ -54,12 +54,12 @@ Examples:
 - demo.launch.py
 >功能：
 启动完整的 MoveIt 演示环境，包括：
-- MoveGroup 节点（核心规划服务）
-- RViz 可视化界面（默认加载运动规划插件）
-- 虚拟机器人（fake 控制器模拟执行）
-- 规划场景监视器（监听碰撞对象和状态）
+-- MoveGroup 节点（核心规划服务）
+-- RViz 可视化界面（默认加载运动规划插件）
+-- 虚拟机器人（fake 控制器模拟执行）
+-- 规划场景监视器（监听碰撞对象和状态）
 >使用场景：
-- 快速验证机器人模型、运动规划和 RViz 交互。
+-- 快速验证机器人模型、运动规划和 RViz 交互。
 - move_group.launch.py
 - moveit_rviz.launch.py
 - rsp.launch.py
@@ -67,23 +67,6 @@ Examples:
 - static_virtual_joint_tfs.launch.py
 - warehouse_db.launch.py
 ```
-1. generate_demo_launch
-对应文件：demo.launch.py
-功能：
-
-启动完整的 MoveIt 演示环境，包括：
-
-MoveGroup 节点（核心规划服务）
-
-RViz 可视化界面（默认加载运动规划插件）
-
-虚拟机器人（fake 控制器模拟执行）
-
-规划场景监视器（监听碰撞对象和状态）
-使用场景：
-
-快速验证机器人模型、运动规划和 RViz 交互。
-
 2. generate_move_group_launch
 对应文件：move_group.launch.py
 功能：
