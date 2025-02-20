@@ -51,7 +51,7 @@
 ```bash
 >(bash) ~/Dlancy_moveit2/ros2_ws$ ros2 launch panda_moveit_config (一些基本的功能包)
 Examples:
-- demo.launch.py
+- 1.demo.launch.py
 >功能：
 启动完整的 MoveIt 演示环境，包括：
 -- MoveGroup 节点（核心规划服务）
@@ -60,7 +60,7 @@ Examples:
 -- 规划场景监视器（监听碰撞对象和状态）
 >使用场景：
 -- 快速验证机器人模型、运动规划和 RViz 交互。
-- move_group.launch.py
+- 2.move_group.launch.py
 >功能：
 单独启动 MoveGroup 节点，提供以下核心服务：
 -- 运动规划（/plan_kinematic_path）
@@ -68,7 +68,7 @@ Examples:
 -- 碰撞检测（通过 PlanningScene）
 >使用场景：
 -- 集成到自定义系统中（如与真实硬件或仿真器连接时）。
-- moveit_rviz.launch.py
+- 3.moveit_rviz.launch.py
 >功能：
 启动 RViz 可视化界面，预配置：
 -- 机器人模型显示
@@ -76,27 +76,27 @@ Examples:
 -- 碰撞物体显示
 >使用场景：
 -- 单独调试 RViz 配置或手动规划路径。
-- rsp.launch.py
+- 4.rsp.launch.py
 >功能：
 启动 Robot State Publisher，发布以下信息：
 -- 机器人关节状态（通过 /joint_states）
 -- TF 坐标系（从 URDF 解析）
 >使用场景：
 -- 当需要独立发布机器人状态时（如与其他传感器数据同步）。
-- spawn_controllers.launch.py
+- 5.spawn_controllers.launch.py
 >功能：
 加载并激活 ROS2 Control 控制器，例如：
 -- joint_trajectory_controller（机械臂轨迹控制）
 -- gripper_controller（夹爪控制）
 >使用场景：
 -- 连接真实硬件或 Gazebo 仿真时，控制实际关节运动。
-- static_virtual_joint_tfs.launch.py
+- 6.static_virtual_joint_tfs.launch.py
 >功能：
 发布 静态虚拟关节的 TF 变换，例如：
 -- 从 world 到机器人基座（如 panda_link0）的固定坐标系
 >使用场景：
 -- 统一多机器人系统或复杂场景的坐标系。
-- warehouse_db.launch.py
+- 7.warehouse_db.launch.py
 >功能：
 启动 MoveIt 规划场景数据库服务，支持：
 -- 存储和加载预先规划的轨迹
