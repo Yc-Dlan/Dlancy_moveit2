@@ -61,98 +61,46 @@ Examples:
 >使用场景：
 -- 快速验证机器人模型、运动规划和 RViz 交互。
 - move_group.launch.py
-- moveit_rviz.launch.py
-- rsp.launch.py
-- spawn_controllers.launch.py
-- static_virtual_joint_tfs.launch.py
-- warehouse_db.launch.py
-```
-2. generate_move_group_launch
-对应文件：move_group.launch.py
-功能：
-
+>功能：
 单独启动 MoveGroup 节点，提供以下核心服务：
-
-运动规划（/plan_kinematic_path）
-
-轨迹执行（/execute_trajectory）
-
-碰撞检测（通过 PlanningScene）
-使用场景：
-
-集成到自定义系统中（如与真实硬件或仿真器连接时）。
-
-3. generate_moveit_rviz_launch
-对应文件：moveit_rviz.launch.py
-功能：
-
+-- 运动规划（/plan_kinematic_path）
+-- 轨迹执行（/execute_trajectory）
+-- 碰撞检测（通过 PlanningScene）
+>使用场景：
+-- 集成到自定义系统中（如与真实硬件或仿真器连接时）。
+- moveit_rviz.launch.py
+>功能：
 启动 RViz 可视化界面，预配置：
-
-机器人模型显示
-
-运动规划面板（设置目标位姿、规划路径）
-
-碰撞物体显示
-使用场景：
-
-单独调试 RViz 配置或手动规划路径。
-
-4. generate_rsp_launch
-对应文件：robot_state_publisher.launch.py
-功能：
-
+-- 机器人模型显示
+-- 运动规划面板（设置目标位姿、规划路径）
+-- 碰撞物体显示
+>使用场景：
+-- 单独调试 RViz 配置或手动规划路径。
+- rsp.launch.py
+>功能：
 启动 Robot State Publisher，发布以下信息：
-
-机器人关节状态（通过 /joint_states）
-
-TF 坐标系（从 URDF 解析）
-使用场景：
-
-当需要独立发布机器人状态时（如与其他传感器数据同步）。
-
-5. generate_spawn_controllers_launch
-对应文件：spawn_controllers.launch.py
-功能：
-
+-- 机器人关节状态（通过 /joint_states）
+-- TF 坐标系（从 URDF 解析）
+>使用场景：
+-- 当需要独立发布机器人状态时（如与其他传感器数据同步）。
+- spawn_controllers.launch.py
+>功能：
 加载并激活 ROS2 Control 控制器，例如：
-
-joint_trajectory_controller（机械臂轨迹控制）
-
-gripper_controller（夹爪控制）
-使用场景：
-
-连接真实硬件或 Gazebo 仿真时，控制实际关节运动。
-
-6. generate_static_virtual_joint_tfs_launch
-对应文件：static_virtual_joint_tfs.launch.py
-功能：
-
+-- joint_trajectory_controller（机械臂轨迹控制）
+-- gripper_controller（夹爪控制）
+>使用场景：
+-- 连接真实硬件或 Gazebo 仿真时，控制实际关节运动。
+- static_virtual_joint_tfs.launch.py
+>功能：
 发布 静态虚拟关节的 TF 变换，例如：
-
-从 world 到机器人基座（如 panda_link0）的固定坐标系
-使用场景：
-
-统一多机器人系统或复杂场景的坐标系。
-
-7. generate_warehouse_db_launch
-对应文件：warehouse_db.launch.py
-功能：
-
+-- 从 world 到机器人基座（如 panda_link0）的固定坐标系
+>使用场景：
+-- 统一多机器人系统或复杂场景的坐标系。
+- warehouse_db.launch.py
+>功能：
 启动 MoveIt 规划场景数据库服务，支持：
-
-存储和加载预先规划的轨迹
-
-管理场景中的碰撞物体
-使用场景：
-
-需要复用历史规划数据或离线规划时。
-
-关键设计逻辑
-模块化拆分
-每个 Launch 文件专注于单一功能（如 RViz、控制器、TF 等），便于按需组合或调试。
-
-参数复用
-通过 MoveItConfigsBuilder 统一加载配置（如 urdf、srdf、kinematics.yaml），避免重复代码。
-
-仿真与硬件解耦
-通过 fake_execution 参数区分仿真和真实控制模式（需手动在 Launch 参数中设置）。
+-- 存储和加载预先规划的轨迹
+-- 管理场景中的碰撞物体
+>使用场景：
+-- 需要复用历史规划数据或离线规划时。
+```
