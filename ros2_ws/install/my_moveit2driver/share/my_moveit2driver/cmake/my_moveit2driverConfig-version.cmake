@@ -1,0 +1,1 @@
+/home/yc-dlan/Dlancy_moveit2/ros2_ws/build/my_moveit2driver/ament_cmake_core/my_moveit2driverConfig-version.cmake

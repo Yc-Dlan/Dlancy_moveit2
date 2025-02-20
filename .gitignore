@@ -1,0 +1,33 @@
+# ROS 构建产物
+/ros_ws/build/
+/ros_ws/install/
+/ros_ws/log/
+
+# IDE配置
+.vscode/
+.idea/
+*.code-workspace
+
+# 编译生成文件
+*.pyc
+__pycache__/
+*.so
+*.dll
+*.exe
+
+# 日志文件
+*.log
+*.jou
+
+# Docker缓存（可选）
+.dockerignore
+*.docker.tar
+
+# 本地环境文件
+.env
+venv/
+
+# 大文件过滤（防止误提交）
+*.bag
+*.pcd
+*.ply
