@@ -1,1 +1,0 @@
-/home/yc-dlan/Dlancy_moveit2/ros2_ws/src/my_moveit2drive/launch/my_moveit2driver.launch.py
