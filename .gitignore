@@ -1,7 +1,7 @@
 # ROS 构建产物
-/ros_ws/build/
-/ros_ws/install/
-/ros_ws/log/
+/ros2_ws/build/
+/ros2_ws/install/
+/ros2_ws/log/
 
 # IDE配置
 .vscode/
